@@ -12,8 +12,8 @@ spring:
         git:
           uri: http://120.26.128.225:10101/r/config/buflo.git
           default-label: ${spring.profiles.active}  #解决监控down
-          username: gengliang
-          password: sking123
+          username: buflo
+          password: buflo
 
 # 关闭安全管理
 management:
