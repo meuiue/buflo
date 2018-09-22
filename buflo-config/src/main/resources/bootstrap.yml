@@ -1,0 +1,62 @@
+server:
+  port: 4001
+
+spring:
+  application:
+    name: buflo-config-server
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://120.26.128.225:10101/r/config/buflo.git
+          default-label: ${spring.profiles.active}  #解决监控down
+          username: gengliang
+          password: sking123
+
+# 关闭安全管理
+management:
+  security:
+    enabled: false
+endpoints:
+  health:
+    sensitive: false
+---
+spring:
+  profiles: dev
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: buffalo
+    password: buffalo
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 20
+  client:
+    serviceUrl:
+      defaultZone: http://buflo:buflo@localhost:9025/eureka
+    registry-fetch-interval-seconds: 10
+---
+spring:
+  profiles: master
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: buffalo
+    password: buffalo
+  cloud:
+    config:
+      retry:
+        initial-interval: 3000
+        multiplier: 1.5
+        max-interval: 20000
+        max-attempts: 6
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://buflo:buflo@eureka:9025/eureka

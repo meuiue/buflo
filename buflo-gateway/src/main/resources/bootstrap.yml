@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: buflo-gateway
+  profiles:
+    active: dev
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        service-id: buflo-config-server
+        enabled: true
+      profile: ${spring.profiles.active}
+      label: ${spring.profiles.active}
+
+logging:
+  level: error
+
+---
+spring:
+  profiles: dev
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 20
+  client:
+    serviceUrl:
+      defaultZone: http://buflo:buflo@localhost:9025/eureka
+    registry-fetch-interval-seconds: 10
+#认证服务器地址
+security:
+  auth:
+    server: http://localhost:3000
+---
+spring:
+  profiles: master
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://buflo:buflo@eureka:9025/eureka
+
+#建议使用ng负载均衡
+security:
+  auth:
+    server: http://localhost:3000
