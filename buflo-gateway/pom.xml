@@ -14,14 +14,14 @@
     <parent>
         <groupId>com.yitusite</groupId>
         <artifactId>buflo</artifactId>
-        <version>${buflo.version}</version>
+        <version>1.1.6</version>
     </parent>
 
     <dependencies>
         <dependency>
             <groupId>com.yitusite</groupId>
             <artifactId>buflo-common</artifactId>
-            <version>1.1.6</version>
+            <version>${buflo.version}</version>
         </dependency>
         <!--zuul网关-->
         <dependency>
@@ -39,6 +39,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-oauth2</artifactId>
         </dependency>
+        <!--jwt -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-jwt</artifactId>
+        </dependency>
         <!--feign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -55,6 +60,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>

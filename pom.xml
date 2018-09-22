@@ -8,6 +8,7 @@
     <artifactId>buflo</artifactId>
     <version>${buflo.version}</version>
     <packaging>pom</packaging>
+    <name>buflo</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -15,19 +16,17 @@
         <version>1.5.15.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <buflo.version>1.1.6</buflo.version>
         <java.version>1.8</java.version>
+        <buflo.version>1.1.6</buflo.version>
         <spring-boot.version>1.5.15.RELEASE</spring-boot.version>
         <spring-cloud.version>Edgware.SR4</spring-cloud.version>
 
-
         <!--Lombok-->
         <lombok.version>1.16.20</lombok.version>
-
 
         <jjwt.version>0.9.0</jjwt.version>
         <fastjson.version>1.2.46</fastjson.version>

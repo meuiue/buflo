@@ -11,6 +11,10 @@ spring:
         enabled: true
       profile: ${spring.profiles.active}
       label: ${spring.profiles.active}
+
+security:
+  basic:
+    enabled: false
 ---
 spring:
   profiles: dev

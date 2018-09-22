@@ -14,7 +14,7 @@
     <parent>
         <groupId>com.yitusite</groupId>
         <artifactId>buflo-modules</artifactId>
-        <version>${buflo.version}</version>
+        <version>1.1.6</version>
     </parent>
 
 
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.yitusite</groupId>
             <artifactId>buflo-common</artifactId>
-            <version>1.1.6</version>
+            <version>${buflo.version}</version>
         </dependency>
         <!--MySQL-->
         <dependency>

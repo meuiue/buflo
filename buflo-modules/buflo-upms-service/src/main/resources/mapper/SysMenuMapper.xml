@@ -37,7 +37,7 @@
         <result column="del_flag" property="delFlag" />
     </resultMap>
 
-    <resultMap id="MenuVoResultMap" type="com.yitusite.buflocommon.vo.MenuVO">
+    <resultMap id="MenuVoResultMap" type="com.yitusite.buflo.common.vo.MenuVO">
         <id column="menu_id" property="menuId" />
         <result column="name" property="name" />
         <result column="permission" property="permission" />

@@ -20,7 +20,7 @@
 <mapper namespace="com.yitusite.buflo.admin.mapper.SysLogMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.yitusite.buflocommon.entity.SysLog">
+    <resultMap id="BaseResultMap" type="com.yitusite.buflo.common.entity.SysLog">
         <id column="id" property="id"/>
         <result column="type" property="type"/>
         <result column="title" property="title"/>
