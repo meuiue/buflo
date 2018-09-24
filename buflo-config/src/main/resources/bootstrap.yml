@@ -10,10 +10,8 @@ spring:
     config:
       server:
         git:
-          uri: http://120.26.128.225:10101/r/config/buflo.git
+          uri: https://github.com/gbuffalo163/buflo-config.git
           default-label: ${spring.profiles.active}  #解决监控down
-          username: buflo
-          password: buflo
 
 # 关闭安全管理
 management:
@@ -27,9 +25,9 @@ spring:
   profiles: dev
   rabbitmq:
     host: 127.0.0.1
-    port: 5672
-    username: buffalo
-    password: buffalo
+    port: 32771
+    username: buflo
+    password: buflo
 eureka:
   instance:
     prefer-ip-address: true
@@ -44,9 +42,9 @@ spring:
   profiles: master
   rabbitmq:
     host: 127.0.0.1
-    port: 5672
-    username: buffalo
-    password: buffalo
+    port: 32771
+    username: buflo
+    password: buflo
   cloud:
     config:
       retry:
