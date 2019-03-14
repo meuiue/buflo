@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/buflo-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/buflo-admin/buflo-cloud-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/buflo-admin/buflo-zipkin-elk" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/buflo-auth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/buflo-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/buflo-config" charset="UTF-8" />

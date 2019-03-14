@@ -3,7 +3,7 @@
 package com.yitusite.buflo.gateway.component.config;
 
 import com.yitusite.buflo.common.bean.config.FilterIgnorePropertiesConfig;
-import com.yitusite.buflo.gateway.component.handler.PigAccessDeniedHandler;
+import com.yitusite.buflo.gateway.component.handler.BufloAccessDeniedHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -29,7 +29,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     @Autowired
     private OAuth2WebSecurityExpressionHandler expressionHandler;
     @Autowired
-    private PigAccessDeniedHandler pigAccessDeniedHandler;
+    private BufloAccessDeniedHandler pigAccessDeniedHandler;
 
     @Override
     public void configure(HttpSecurity http) throws Exception {

@@ -3,15 +3,23 @@ server:
 
 spring:
   application:
-    name: buflo-config-server
+    name: buflo-config
   profiles:
-    active: dev
+      active: native
+  # 配置中心
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/gbuffalo163/buflo-config.git
-          default-label: ${spring.profiles.active}  #解决监控down
+        native:
+          search-locations: classpath:/config/
+#  profiles:
+#    active: dev
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/meuiue/buflo-config.git
+#          default-label: ${spring.profiles.active}  #解决监控down
 
 # 关闭安全管理
 management:
@@ -20,14 +28,12 @@ management:
 endpoints:
   health:
     sensitive: false
----
-spring:
-  profiles: dev
-  rabbitmq:
-    host: 127.0.0.1
-    port: 32771
-    username: buflo
-    password: buflo
+
+rabbitmq:
+  host: buflo-rabbitmq
+  port: 5672
+  username: buflo
+  password: buflo
 eureka:
   instance:
     prefer-ip-address: true
@@ -35,13 +41,13 @@ eureka:
     lease-expiration-duration-in-seconds: 20
   client:
     serviceUrl:
-      defaultZone: http://buflo:buflo@localhost:9025/eureka
+      defaultZone: http://buflo:buflo@buflo-eureka:9025/eureka
     registry-fetch-interval-seconds: 10
 ---
 spring:
   profiles: master
   rabbitmq:
-    host: 127.0.0.1
+    host: buflo-rabbitmq
     port: 32771
     username: buflo
     password: buflo
@@ -57,4 +63,4 @@ eureka:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://buflo:buflo@eureka:9025/eureka
+      defaultZone: http://buflo:buflo@buflo-eureka:9025/eureka

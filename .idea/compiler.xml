@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="buflo-admin" />
         <module name="buflo-auth" />
+        <module name="buflo-cloud-admin" />
         <module name="buflo-common" />
         <module name="buflo-config" />
         <module name="buflo-daemon-service" />
@@ -15,6 +16,7 @@
         <module name="buflo-gateway" />
         <module name="buflo-mc-service" />
         <module name="buflo-upms-service" />
+        <module name="buflo-zipkin-elk" />
       </profile>
     </annotationProcessing>
   </component>

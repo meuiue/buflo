@@ -5,6 +5,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/buflo-admin/buflo-cloud-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/buflo-admin/buflo-zipkin-elk/pom.xml" />
       </list>
     </option>
   </component>

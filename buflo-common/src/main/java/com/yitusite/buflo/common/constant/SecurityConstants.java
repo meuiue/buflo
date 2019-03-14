@@ -9,7 +9,7 @@ public interface SecurityConstants {
     /**
      * 前缀
      */
-    String PIG_PREFIX = "buflo_";
+    String BUFLO_PREFIX = "buflo_";
     /**
      * 用户信息头
      */
@@ -22,7 +22,7 @@ public interface SecurityConstants {
     /**
      * 项目的license
      */
-    String PIG_LICENSE = "made by buflo";
+    String BUFLO_LICENSE = "made by buflo";
     /**
      * 基础角色
      */

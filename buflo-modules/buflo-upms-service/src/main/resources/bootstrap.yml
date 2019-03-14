@@ -1,3 +1,6 @@
+server:
+  port: 4002
+
 spring:
   application:
     name: buflo-upms-service
@@ -7,10 +10,10 @@ spring:
     config:
       fail-fast: true
       discovery:
-        service-id: buflo-config-server
+        service-id: buflo-config
         enabled: true
       profile: ${spring.profiles.active}
-      label: ${spring.profiles.active}
+      name: ${spring.application.name}
 
 ---
 spring:
@@ -22,7 +25,7 @@ eureka:
     lease-expiration-duration-in-seconds: 20
   client:
     serviceUrl:
-      defaultZone: http://buflo:buflo@localhost:9025/eureka
+      defaultZone: http://buflo:buflo@buflo-eureka:9025/eureka
     registry-fetch-interval-seconds: 10
 
 ---
@@ -33,4 +36,4 @@ eureka:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://buflo:buflo@eureka:9025/eureka
+      defaultZone: http://buflo:buflo@buflo-eureka:9025/eureka

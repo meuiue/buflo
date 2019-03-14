@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pig微服务统一认证</title>
+    <title>微服务统一认证</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/signin.css" rel="stylesheet">
@@ -24,8 +24,7 @@
       </form>
     </div>
     <footer>
-      <p>support by: lengleng</p>
-      <p>email: <a href="mailto:wangiegie@gmail.com">wangiegie@gmail.com</a>.</p>
+      <p>support by: gengliang</p>
     </footer>
   </body>
 </html>

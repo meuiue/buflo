@@ -1,23 +1,26 @@
+server:
+  port: 3001
+
 spring:
   application:
     name: buflo-auth
   profiles:
     active: dev
+  # 配置中心
   cloud:
     config:
       fail-fast: true
       discovery:
-        service-id: buflo-config-server
+        service-id: buflo-config
         enabled: true
       profile: ${spring.profiles.active}
-      label: ${spring.profiles.active}
+      name: ${spring.application.name}
 
 security:
   basic:
     enabled: false
----
-spring:
-  profiles: dev
+
+# 注册中心配置
 eureka:
   instance:
     prefer-ip-address: true
@@ -25,15 +28,5 @@ eureka:
     lease-expiration-duration-in-seconds: 20
   client:
     serviceUrl:
-      defaultZone: http://buflo:buflo@localhost:9025/eureka
+      defaultZone: http://buflo:buflo@buflo-eureka:9025/eureka
     registry-fetch-interval-seconds: 10
-
----
-spring:
-  profiles: master
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    serviceUrl:
-      defaultZone: http://buflo:buflo@eureka:9025/eureka
