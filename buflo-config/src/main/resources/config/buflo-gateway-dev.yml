@@ -1,0 +1,57 @@
+spring:
+  zipkin:
+    rabbitmq:
+      queue: zipkin
+  sleuth:
+    sampler:
+      percentage: 0.2
+
+zuul:
+  ribbon:
+    eager-load:
+      enabled: true
+      clients: buflo-auth,buflo-upms-service
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 10000
+  ratelimit:
+    key-prefix: buflo-ratelimite
+    enabled: true
+    repository: REDIS
+    behind-proxy: true
+    policies:
+      buflo-upms-service:
+        limit: 100
+        quota: 100
+        refresh-interval: 3
+
+security:
+  encode:
+    key: '1234567887654321' #必须16位
+  validate:
+    code: false
+  sessions: stateless
+  oauth2:
+    client:
+      client-id: buflo
+      client-secret: buflo
+    resource:
+      jwt:
+         key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
+
+ignore:
+  urls:
+    - /mobile/**
+    - /auth/**
+    - /admin/code/*
+    - /admin/smsCode/*
+    - /admin/user/info
+    - /admin/menu/userMenu
+    - /swagger-resources/**
+    - /swagger-ui.html
+    - /*/v2/api-docs
+    - /swagger/api-docs
+    - /webjars/**
+  clients:
+    - app

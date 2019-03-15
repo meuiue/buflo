@@ -1,0 +1,20 @@
+## spring security 配置
+security:
+  basic:
+    enabled: false
+
+# 数据源配置
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://buflo-mysql:3306/pig?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+  resources:
+    static-locations: classpath:/static/,classpath:/views/
+
+# 直接放行URL
+ignore:
+  urls:
+    - /actuator/**

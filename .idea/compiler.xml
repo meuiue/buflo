@@ -15,9 +15,14 @@
         <module name="buflo-eureka" />
         <module name="buflo-gateway" />
         <module name="buflo-mc-service" />
+        <module name="buflo-shop-member" />
         <module name="buflo-upms-service" />
         <module name="buflo-zipkin-elk" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="buflo-codegen" target="1.8" />
+      <module name="buflo-shop" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

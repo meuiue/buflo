@@ -14,5 +14,6 @@
     <file url="file://$PROJECT_DIR$/buflo-modules/buflo-daemon-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/buflo-modules/buflo-mc-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/buflo-modules/buflo-upms-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/buflo-shop/buflo-shop-member" charset="UTF-8" />
   </component>
 </project>

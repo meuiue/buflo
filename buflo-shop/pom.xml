@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>buflo</artifactId>
+    <groupId>com.yitusite</groupId>
+    <version>1.1.6</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>buflo-shop</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+    <module>buflo-shop-member</module>
+  </modules>
+
+
+  <dependencies>
+
+    <dependency>
+      <groupId>com.yitusite</groupId>
+      <artifactId>buflo-common</artifactId>
+      <version>${buflo.version}</version>
+    </dependency>
+
+  </dependencies>
+
+</project>

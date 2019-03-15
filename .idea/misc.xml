@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/buflo-admin/buflo-cloud-admin/pom.xml" />
         <option value="$PROJECT_DIR$/buflo-admin/buflo-zipkin-elk/pom.xml" />
+        <option value="$PROJECT_DIR$/buflo-shop/buflo-shop-member/pom.xml" />
       </list>
     </option>
   </component>

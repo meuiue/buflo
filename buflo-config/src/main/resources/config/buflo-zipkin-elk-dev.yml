@@ -1,0 +1,19 @@
+server:
+  port: 5002
+
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: buflo-rabbitmq:5672
+      username: buflo
+      password: buflo
+      queue: zipkin
+  storage:
+    type: elasticsearch
+    elasticsearch:
+      hosts: buflo-zipkin:9200
+      cluster: elasticsearch
+      index: zipkin
+      max-requests: 64
+      index-shards: 5
+      index-replicas: 1
